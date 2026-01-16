@@ -1,4 +1,5 @@
 import 'package:calculadora_imc/utils/app_colors.dart';
+import 'package:calculadora_imc/utils/app_sizes.dart';
 import 'package:calculadora_imc/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class FlutterFit extends StatelessWidget {
     return ShaderMask(
       shaderCallback: (bounds) {
         return gradient.createShader(
-          Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+          Rect.fromLTWH(AppSizes.s0, AppSizes.s0, bounds.width, bounds.height),
         );
       },
       child: Text("FlutterFit", style: AppTextStyle.titleStyle),
