@@ -1,6 +1,7 @@
 import 'package:calculadora_imc/layouts/desktop_layout.dart';
 import 'package:calculadora_imc/layouts/mobile_layout.dart';
 import 'package:calculadora_imc/layouts/tablet_layout.dart';
+import 'package:calculadora_imc/utils/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 //Use View.of(context)
@@ -17,9 +18,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth <= 390) {
+        if (constraints.maxWidth <= AppSizes.breakPointMobile) {
           return LayoutMobile();
-        } else if (constraints.maxWidth > 390 && constraints.maxWidth < 1024) {
+        } else if (constraints.maxWidth > AppSizes.breakPointMobile &&
+            constraints.maxWidth < AppSizes.breakPointDesktop) {
           return LayoutTablet();
         } else {
           return LayoutDesktop(); // Mostra quando nenhuma se enquadra
