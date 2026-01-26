@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AppTextStyle {
   // Style title
   static const TextStyle titleStyle = TextStyle(
-    color: Colors.white,
+    color: AppColors.textColor,
     fontWeight: FontWeight.bold,
     fontSize: AppSizes.s60,
     shadows: [
@@ -17,5 +17,21 @@ class AppTextStyle {
   static const TextStyle subTitle = TextStyle(
     color: AppColors.subtitleColor,
     fontSize: AppSizes.s20,
+  );
+  //TitleCards
+  static const TextStyle titleCards = TextStyle(
+    color: AppColors.textColor,
+    fontSize: AppSizes.s24,
+  );
+  //TextInput
+  static const TextStyle textInput = TextStyle(
+    color: AppColors.textColor,
+    fontSize: AppSizes.s16,
+  );
+  //TextButtonData
+  static const TextStyle TextButtonData = TextStyle(
+    color: AppColors.textColor,
+    fontSize: AppSizes.s16,
+    fontWeight: FontWeight.w500,
   );
 }
