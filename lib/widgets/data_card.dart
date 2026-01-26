@@ -58,7 +58,7 @@ class DataCard extends StatelessWidget {
                   child: Center(
                     child: Text(
                       "Calcular IMC",
-                      style: AppTextStyle.TextButtonData,
+                      style: AppTextStyle.textButtonData,
                     ),
                   ),
                 ),

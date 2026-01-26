@@ -29,9 +29,20 @@ class AppTextStyle {
     fontSize: AppSizes.s16,
   );
   //TextButtonData
-  static const TextStyle TextButtonData = TextStyle(
+  static const TextStyle textButtonData = TextStyle(
     color: AppColors.textColor,
     fontSize: AppSizes.s16,
     fontWeight: FontWeight.w500,
+  );
+  //TitleRankingcard
+  static const TextStyle titleRankingcard = TextStyle(
+    color: AppColors.textColor,
+    fontSize: AppSizes.s14,
+    fontWeight: FontWeight.w300,
+  );
+  //subTitleRankingcard
+  static const TextStyle subTitleRankingcard = TextStyle(
+    color: AppColors.subtitleColor,
+    fontSize: AppSizes.s14,
   );
 }
