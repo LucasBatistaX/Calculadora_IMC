@@ -125,7 +125,7 @@ flutter run -d chrome
 
 ## 📸 Screenshots
 
-> Em breve
+> Atualmente
 
 <img width="700" height="440" alt="image" src="https://github.com/user-attachments/assets/03fd3c83-ed8b-4899-adcc-9eeb09e75f39" />
 
@@ -152,3 +152,4 @@ Este projeto está sob a licença MIT. Sinta-se à vontade para utilizar, estuda
 ---
 
 ⭐ Se este projeto te ajudou ou te inspirou, não esqueça de deixar uma estrela no repositório!
+
