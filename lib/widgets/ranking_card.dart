@@ -5,7 +5,18 @@ import 'package:calculadora_imc/widgets/sub_card_ranking.dart';
 import 'package:flutter/material.dart';
 
 class RankingCard extends StatelessWidget {
-  const RankingCard({super.key});
+  const RankingCard({
+    super.key,
+    required this.crossAxisCount,
+    required this.crossAxisSpacing,
+    required this.mainAxisSpacing,
+    required this.childAspectRatio,
+  });
+
+  final int crossAxisCount;
+  final double crossAxisSpacing;
+  final double mainAxisSpacing;
+  final double childAspectRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +38,10 @@ class RankingCard extends StatelessWidget {
               GridView.count(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                crossAxisCount: AppSizes.sg2,
-                crossAxisSpacing: AppSizes.s4,
-                mainAxisSpacing: AppSizes.s4,
-                childAspectRatio: AppSizes.sg25,
+                crossAxisCount: crossAxisCount,
+                crossAxisSpacing: crossAxisSpacing,
+                mainAxisSpacing: mainAxisSpacing,
+                childAspectRatio: childAspectRatio,
                 children: [
                   SubCardRanking(
                     circleAvatarColor: AppColors.lowWeight,
@@ -61,3 +72,35 @@ class RankingCard extends StatelessWidget {
     );
   }
 }
+
+
+// GridView.count(
+//                 shrinkWrap: true,
+//                 physics: NeverScrollableScrollPhysics(),
+//                 crossAxisCount: AppSizes.sg2,
+//                 crossAxisSpacing: AppSizes.s4,
+//                 mainAxisSpacing: AppSizes.s4,
+//                 childAspectRatio: AppSizes.sg25,
+//                 children: [
+//                   SubCardRanking(
+//                     circleAvatarColor: AppColors.lowWeight,
+//                     title: "Baixo peso",
+//                     subTitle: "IMC: < 18.5",
+//                   ),
+//                   SubCardRanking(
+//                     circleAvatarColor: AppColors.normalWeight,
+//                     title: "Peso normal",
+//                     subTitle: "IMC: 18.5 - 24.9",
+//                   ),
+//                   SubCardRanking(
+//                     circleAvatarColor: AppColors.overWeight,
+//                     title: "Sobrepeso",
+//                     subTitle: "IMC: 25 - 29.9",
+//                   ),
+//                   SubCardRanking(
+//                     circleAvatarColor: AppColors.heightWeight,
+//                     title: "Obesidade",
+//                     subTitle: "IMC: ≥ 30",
+//                   ),
+//                 ],
+//               ),
