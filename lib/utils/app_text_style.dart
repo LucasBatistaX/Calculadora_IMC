@@ -45,4 +45,17 @@ class AppTextStyle {
     color: AppColors.subtitleColor,
     fontSize: AppSizes.s14,
   );
+
+  //StyleOfResultDialog
+
+  static const TextStyle dialogClassification = TextStyle(
+    color: AppColors.overWeight,
+    fontSize: AppSizes.s20,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle dialogNumberResult = TextStyle(
+    color: Colors.white,
+    fontSize: AppSizes.s40,
+    fontWeight: FontWeight.bold,
+  );
 }

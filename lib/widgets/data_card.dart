@@ -1,6 +1,7 @@
 import 'package:calculadora_imc/utils/app_colors.dart';
 import 'package:calculadora_imc/utils/app_sizes.dart';
 import 'package:calculadora_imc/utils/app_text_style.dart';
+import 'package:calculadora_imc/widgets/button_calculator.dart';
 import 'package:calculadora_imc/widgets/input_data.dart';
 import 'package:flutter/material.dart';
 
@@ -52,29 +53,7 @@ class DataCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: AppSizes.s24),
-                    GestureDetector(
-                      onTap: () {
-                        debugPrint("Clicado!");
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(AppSizes.s10),
-                          gradient: LinearGradient(
-                            colors: [AppColors.beginColor, AppColors.endColor],
-                            begin: AlignmentGeometry.centerLeft,
-                            end: AlignmentGeometry.centerRight,
-                          ),
-                        ),
-                        height: AppSizes.s56,
-                        child: Center(
-                          child: Text(
-                            "Calcular IMC",
-                            style: AppTextStyle.textButtonData,
-                          ),
-                        ),
-                      ),
-                    ),
+                    ButtonCalculator(),
                   ],
                 ),
               ),
@@ -117,29 +96,7 @@ class DataCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: AppSizes.s24),
-                    GestureDetector(
-                      onTap: () {
-                        debugPrint("Clicado!");
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(AppSizes.s10),
-                          gradient: LinearGradient(
-                            colors: [AppColors.beginColor, AppColors.endColor],
-                            begin: AlignmentGeometry.centerLeft,
-                            end: AlignmentGeometry.centerRight,
-                          ),
-                        ),
-                        height: AppSizes.s56,
-                        child: Center(
-                          child: Text(
-                            "Calcular IMC",
-                            style: AppTextStyle.textButtonData,
-                          ),
-                        ),
-                      ),
-                    ),
+                    ButtonCalculator(),
                   ],
                 ),
               ),

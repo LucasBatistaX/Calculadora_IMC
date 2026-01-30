@@ -14,12 +14,18 @@ class AppSizes {
   static const double s24 = 24.0;
   static const double s26 = 26.0;
   static const double s28 = 28.0;
+  static const double s30 = 30.0;
   static const double s32 = 32.0;
+  static const double s40 = 40.0;
   static const double s48 = 48.0;
   static const double s56 = 56.0;
   static const double s60 = 60.0;
+  static const double s70 = 70.0;
+  static const double s350 = 350.0;
+  static const double s500 = 500.0;
+  static const double s530 = 530.0;
 
-  //Heights
+  //Heights specifics
   static const double h80 = 80.0;
   static const double h90 = 90.0;
   static const double h96 = 96.0;
@@ -30,7 +36,7 @@ class AppSizes {
   static const double h400 = 400.0;
   static const double h460 = 460.0;
 
-  //Widths
+  //Widths specifics
   static const double w424 = 424.0;
   static const double w174 = 174.0;
 
@@ -43,8 +49,4 @@ class AppSizes {
   static const int breakPointMobile = 390;
   static const int breakPointTablet = 768;
   static const int breakPointDesktop = 1024;
-
-  
-  
-
 }
