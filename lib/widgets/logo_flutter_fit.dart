@@ -9,7 +9,7 @@ class LogoFlutterFit extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 768) {
+        if (constraints.maxWidth >= AppSizes.breakPointTablet) {
           return Image.asset(AppAssets.logo2, height: AppSizes.h96);
         } else {
           return Image.asset(AppAssets.logo2, height: AppSizes.h80);

@@ -29,11 +29,10 @@ class SubCardRanking extends StatelessWidget {
         ),
         color: AppColors.backgroundCard,
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: AppSizes.s12,
-            horizontal: AppSizes.s24,
-          ),
+          padding: const EdgeInsets.only(left: AppSizes.s12),
           child: Row(
+            mainAxisAlignment: .start,
+            crossAxisAlignment: .center,
             children: [
               CircleAvatar(
                 radius: AppSizes.s6,
@@ -41,7 +40,9 @@ class SubCardRanking extends StatelessWidget {
               ),
               SizedBox(width: AppSizes.s12),
               Column(
+                mainAxisAlignment: .center,
                 crossAxisAlignment: .start,
+                //crossAxisAlignment: .start,
                 children: [
                   Text(title, style: AppTextStyle.titleRankingcard),
                   Text(subTitle, style: AppTextStyle.subTitleRankingcard),

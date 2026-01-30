@@ -9,14 +9,20 @@ import 'package:calculadora_imc/widgets/subtitle.dart';
 import 'package:flutter/material.dart';
 
 class LayoutMobile extends StatelessWidget {
-  const LayoutMobile({
-    super.key,
-  });
+  const LayoutMobile({super.key});
 
-// Layout para telas maiores de 1024px
+  // Layout para telas menores de menores que 390px;
 
   @override
   Widget build(BuildContext context) {
+    double itemWidth = MediaQuery.of(
+      context,
+    ).size.width; // Coleta o dado de tamanho (Width) da tela.
+    double itemHeight = AppSizes.h98; // tamanho (Heigth) fixo do subCard.
+    double ratio =
+        itemWidth /
+        itemHeight; // calculo para adaptação do tamanho do card conforme a disposição do tamanho da tela.
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: ListView(
@@ -24,7 +30,6 @@ class LayoutMobile extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: .center,
-            mainAxisAlignment: .spaceBetween,
             children: [
               SizedBox(height: AppSizes.s60),
               LogoFlutterFit(),
@@ -34,15 +39,22 @@ class LayoutMobile extends StatelessWidget {
               Subtitle(),
               SizedBox(height: AppSizes.s48),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.s16,
-                ),
-                child: Row(
+                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
+                child: Column(
                   mainAxisAlignment: .center,
                   children: [
-                    DataCard(),
-                    SizedBox(width: AppSizes.s48),
-                    RankingCard(),
+                    SizedBox(width: double.infinity, child: DataCard()),
+                    SizedBox(height: AppSizes.s32),
+                    SizedBox(
+                      height: AppSizes.h460,
+                      width: double.infinity,
+                      child: RankingCard(
+                        crossAxisCount: AppSizes.sg1,
+                        crossAxisSpacing: AppSizes.s4,
+                        mainAxisSpacing: AppSizes.s4,
+                        childAspectRatio: ratio,
+                      ),
+                    ),
                   ],
                 ),
               ),
