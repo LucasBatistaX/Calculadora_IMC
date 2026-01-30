@@ -3,6 +3,7 @@ import 'package:calculadora_imc/utils/app_assets.dart';
 import 'package:calculadora_imc/utils/app_sizes.dart';
 import 'package:calculadora_imc/widgets/data_card.dart';
 import 'package:calculadora_imc/widgets/flutter_fit.dart';
+import 'package:calculadora_imc/widgets/footer.dart';
 import 'package:calculadora_imc/widgets/ranking_card.dart';
 import 'package:calculadora_imc/widgets/subtitle.dart';
 import 'package:flutter/material.dart';
@@ -21,26 +22,33 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            Image.asset(AppAssets.logo2, height: AppSizes.h96),
-            SizedBox(height: AppSizes.s16),
-            FlutterFit(),
-            SizedBox(height: AppSizes.s16),
-            Subtitle(),
-            SizedBox(height: AppSizes.s48),
-            Row(
-              mainAxisAlignment: .center,
-              children: [
-                DataCard(),
-                SizedBox(width: AppSizes.s48),
-                RankingCard(),
-              ],
-            ),
-          ],
-        ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Column(
+            crossAxisAlignment: .center,
+            mainAxisAlignment: .spaceBetween,
+            children: [
+              SizedBox(height: AppSizes.s60),
+              Image.asset(AppAssets.logo2, height: AppSizes.h96),
+              SizedBox(height: AppSizes.s16),
+              FlutterFit(),
+              SizedBox(height: AppSizes.s16),
+              Subtitle(),
+              SizedBox(height: AppSizes.s48),
+              Row(
+                mainAxisAlignment: .center,
+                children: [
+                  DataCard(),
+                  SizedBox(width: AppSizes.s48),
+                  RankingCard(),
+                ],
+              ),
+              SizedBox(height: AppSizes.h90),
+              TextFooter(),
+            ],
+          ),
+        ],
       ),
     );
   }
