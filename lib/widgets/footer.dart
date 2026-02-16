@@ -33,7 +33,7 @@ class TextFooter extends StatelessWidget {
                       decoration: TextDecoration.underline,
                       decorationColor: AppColors.beginColor,
                       decorationStyle: TextDecorationStyle.solid,
-                      decorationThickness: 2,
+                      decorationThickness: AppSizes.s2,
                     ),
                   ),
                 );
