@@ -1,6 +1,7 @@
 import 'package:calculadora_imc/utils/app_colors.dart';
 import 'package:calculadora_imc/utils/app_sizes.dart';
 import 'package:flutter/material.dart';
+  
 
 class AppTextStyle {
   // Style title
@@ -45,11 +46,9 @@ class AppTextStyle {
     color: AppColors.subtitleColor,
     fontSize: AppSizes.s14,
   );
-
-  //StyleOfResultDialog
-
-  static const TextStyle dialogClassification = TextStyle(
-    color: AppColors.overWeight,
+  //Obesidade Styles;
+  static TextStyle dialogClassification(Color classificaoColor) => TextStyle(
+    color: classificaoColor,
     fontSize: AppSizes.s20,
     fontWeight: FontWeight.bold,
   );

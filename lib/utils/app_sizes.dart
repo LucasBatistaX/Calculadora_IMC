@@ -30,7 +30,7 @@ class AppSizes {
   static const double h90 = 90.0;
   static const double h96 = 96.0;
   static const double h98 = 98.0;
-  static const double h270 = 270.0;
+  static const double h280 = 280.0;
   static const double h300 = 300.0;
   static const double h364 = 364.0;
   static const double h400 = 400.0;
@@ -39,6 +39,7 @@ class AppSizes {
   //Widths specifics
   static const double w424 = 424.0;
   static const double w174 = 174.0;
+  static const double w110 = 110.0;
 
   //Sizes gridView
   static const int sg1 = 1;
@@ -49,4 +50,7 @@ class AppSizes {
   static const int breakPointMobile = 390;
   static const int breakPointTablet = 768;
   static const int breakPointDesktop = 1024;
+
+  //Formatação do resultado;
+  static const int format = 10000;
 }

@@ -21,5 +21,7 @@ class AppColors {
   static const Color normalWeight = Color(0xff1CCA5B);
   static const Color overWeight = Color(0xffF59F0A);
   static const Color heightWeight = Color(0xffDC2828);
-  
+
+  //
+  static Color ringColor(Color ring) => ring;
 }
