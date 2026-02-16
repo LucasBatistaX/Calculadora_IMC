@@ -156,8 +156,7 @@ BreakPoint - (1024px);
 
 ## 📈 Próximas Melhorias
 
-* Refatoração contínua do layout.
-* Implementação da regra de negócio do projeto.
+* Refatoração contínua do layout e regra de negócio.
 
 ---
 
@@ -175,5 +174,6 @@ Este projeto está sob a licença MIT. Sinta-se à vontade para utilizar, estuda
 ---
 
 ⭐ Se este projeto te ajudou ou te inspirou, não esqueça de deixar uma estrela no repositório!
+
 
 
