@@ -56,12 +56,22 @@ Foram utilizados recursos do Flutter como:
 
 ```bash
 lib/
+ ├── domain/
+ │   └── imc_service.dart
+ │
+ ├── enum/
+ │   └── enum_classificacao.dart
+ │
  ├── layouts/
  │   ├── desktop_layout.dart
  │   ├── mobile_layout.dart
  │   └── tablet_layout.dart
  │
+ ├── presentation/
+ │   └── presentation_color_ui.dart
+ │
  ├── providers/
+ │   └── imc_provider.dart
  │
  ├── src/
  │   └── pages/
@@ -74,16 +84,18 @@ lib/
  │   └── app_text_style.dart
  │
  ├── widgets/
+ │   ├── button_calculator.dart
  │   ├── data_card.dart
  │   ├── flutter_fit.dart
  │   ├── footer.dart
- │   ├── input_data.dart
  │   ├── logo_flutter_fit.dart
  │   ├── ranking_card.dart
+ │   ├── result_dialog.dart
  │   ├── sub_card_ranking.dart
  │   └── subtitle.dart
  │
  └── main.dart
+
 
 > A estrutura do projeto foi organizada com foco em **responsividade**, **separação de responsabilidades** e **facilidade de manutenção**, permitindo uma evolução clara do código tanto no Flutter Web quanto em outros targets.
 
@@ -123,11 +135,22 @@ flutter run -d chrome
 
 ---
 
-## 📸 Screenshots
+## 📸 Layouts
 
 > Atualmente
 
-<img width="700" height="440" alt="image" src="https://github.com/user-attachments/assets/03fd3c83-ed8b-4899-adcc-9eeb09e75f39" />
+BreakPoint - (390px);
+
+<img width="411" height="875" alt="image" src="https://github.com/user-attachments/assets/37c2c93f-0393-478e-8981-90c1ccebb77e" />
+
+BreakPoint - (768px);
+
+<img width="300" height="430" alt="image" src="https://github.com/user-attachments/assets/f56df88d-ad4f-442a-8f28-f847923e641b" />
+
+
+BreakPoint - (1024px);
+
+<img width="955" height="460" alt="image" src="https://github.com/user-attachments/assets/73a7a20c-e5f1-455b-b303-0cecf688c319" />
 
 ---
 
@@ -152,4 +175,5 @@ Este projeto está sob a licença MIT. Sinta-se à vontade para utilizar, estuda
 ---
 
 ⭐ Se este projeto te ajudou ou te inspirou, não esqueça de deixar uma estrela no repositório!
+
 
