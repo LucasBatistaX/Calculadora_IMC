@@ -16,10 +16,12 @@ class AppColors {
   // BorderColorCard
   static const Color borderColorCard = Color(0xff1D283A);
 
-  //StatusColorsRanking
+  // StatusColorsRanking
   static const Color lowWeight = Color(0xff0DA2E7);
   static const Color normalWeight = Color(0xff1CCA5B);
   static const Color overWeight = Color(0xffF59F0A);
   static const Color heightWeight = Color(0xffDC2828);
-  
+
+  //
+  static Color ringColor(Color ring) => ring;
 }

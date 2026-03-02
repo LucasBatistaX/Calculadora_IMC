@@ -21,7 +21,7 @@ class RankingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppSizes.h270,
+      height: AppSizes.h280,
       width: AppSizes.w424,
       child: Card(
         shape: RoundedRectangleBorder(
