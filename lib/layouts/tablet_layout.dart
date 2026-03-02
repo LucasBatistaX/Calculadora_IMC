@@ -15,6 +15,14 @@ class LayoutTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double itemWidth =
+        MediaQuery.of(context).size.width /
+        AppSizes.sg2; // Coleta o dado de tamanho (Width) da tela.
+    double itemHeight = AppSizes.h98; // tamanho (Heigth) fixo do subCard.
+    double ratio =
+        itemWidth /
+        itemHeight; // calculo para adaptação do tamanho do card conforme a disposição do tamanho da tela.
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: ListView(
@@ -37,7 +45,16 @@ class LayoutTablet extends StatelessWidget {
                   children: [
                     SizedBox(width: double.infinity, child: DataCard()),
                     SizedBox(height: AppSizes.s32),
-                    SizedBox(width: double.infinity, child: RankingCard()),
+                    SizedBox(
+                      height: AppSizes.h300,
+                      width: double.infinity,
+                      child: RankingCard(
+                        crossAxisCount: AppSizes.sg2,
+                        crossAxisSpacing: AppSizes.s4,
+                        mainAxisSpacing: AppSizes.s4,
+                        childAspectRatio: ratio,
+                      ),
+                    ),
                   ],
                 ),
               ),

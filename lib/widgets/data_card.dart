@@ -11,7 +11,7 @@ class DataCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 390) {
+        if (constraints.maxWidth >= AppSizes.breakPointMobile) {
           return SizedBox(
             height: AppSizes.h270,
             width: AppSizes.w424,
@@ -82,7 +82,7 @@ class DataCard extends StatelessWidget {
           );
         } else {
           return SizedBox(
-            height: AppSizes.h380,
+            height: AppSizes.h364,
             width: AppSizes.w424,
             child: Card(
               shape: RoundedRectangleBorder(

@@ -9,11 +9,9 @@ import 'package:calculadora_imc/widgets/subtitle.dart';
 import 'package:flutter/material.dart';
 
 class LayoutDesktop extends StatelessWidget {
-  const LayoutDesktop({
-    super.key,
-  });
+  const LayoutDesktop({super.key});
 
-// Layout para telas maiores de 1024px
+  // Layout para telas maiores de 1024px
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +32,18 @@ class LayoutDesktop extends StatelessWidget {
               Subtitle(),
               SizedBox(height: AppSizes.s48),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.s16,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
                 child: Row(
                   mainAxisAlignment: .center,
                   children: [
                     DataCard(),
                     SizedBox(width: AppSizes.s48),
-                    RankingCard(),
+                    RankingCard(
+                      crossAxisCount: AppSizes.sg2,
+                      crossAxisSpacing: AppSizes.s4,
+                      mainAxisSpacing: AppSizes.s4,
+                      childAspectRatio: AppSizes.sg25,
+                    ),
                   ],
                 ),
               ),
