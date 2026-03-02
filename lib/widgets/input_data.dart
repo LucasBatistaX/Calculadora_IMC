@@ -8,7 +8,7 @@ class InputData extends StatelessWidget {
     super.key,
     required this.label,
     required this.icon,
-    required this.angleIcon
+    required this.angleIcon,
   });
 
   final String label;
@@ -17,31 +17,24 @@ class InputData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: TextFormField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(AppSizes.s10),
-          ),
-          labelStyle: TextStyle(color: AppColors.subtitleColor),
-          labelText: label,
-          prefixIcon: Transform.rotate(
-            angle: angleIcon,
-            child: Icon(
-              icon,
-              color: AppColors.endColor,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: AppColors.subtitleColor,
-            ),
-            borderRadius: BorderRadius.circular(AppSizes.s10),
-          ),
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(AppSizes.s10),
         ),
-        style: AppTextStyle.textInput,
-        keyboardType: TextInputType.number,
+        labelStyle: TextStyle(color: AppColors.subtitleColor),
+        labelText: label,
+        prefixIcon: Transform.rotate(
+          angle: angleIcon,
+          child: Icon(icon, color: AppColors.endColor),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.subtitleColor),
+          borderRadius: BorderRadius.circular(AppSizes.s10),
+        ),
       ),
+      style: AppTextStyle.textInput,
+      keyboardType: TextInputType.number,
     );
   }
 }

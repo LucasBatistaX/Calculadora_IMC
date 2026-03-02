@@ -17,13 +17,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        
-        if (constraints.maxWidth < 950) {
+        if (constraints.maxWidth <= 390) {
           return LayoutMobile();
-        } else if (constraints.maxWidth >= 950 && constraints.maxWidth < 1023) {
+        } else if (constraints.maxWidth > 390 && constraints.maxWidth < 1024) {
           return LayoutTablet();
         } else {
-          return LayoutDesktop();
+          return LayoutDesktop(); // Mostra quando nenhuma se enquadra
         }
       },
     );

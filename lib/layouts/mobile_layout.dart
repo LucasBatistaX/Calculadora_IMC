@@ -9,11 +9,9 @@ import 'package:calculadora_imc/widgets/subtitle.dart';
 import 'package:flutter/material.dart';
 
 class LayoutMobile extends StatelessWidget {
-  const LayoutMobile({
-    super.key,
-  });
+  const LayoutMobile({super.key});
 
-// Layout para telas maiores de 1024px
+  // Layout para telas menores de menores que 390px;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,6 @@ class LayoutMobile extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: .center,
-            mainAxisAlignment: .spaceBetween,
             children: [
               SizedBox(height: AppSizes.s60),
               LogoFlutterFit(),
@@ -34,15 +31,13 @@ class LayoutMobile extends StatelessWidget {
               Subtitle(),
               SizedBox(height: AppSizes.s48),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.s16,
-                ),
-                child: Row(
+                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
+                child: Column(
                   mainAxisAlignment: .center,
                   children: [
-                    DataCard(),
-                    SizedBox(width: AppSizes.s48),
-                    RankingCard(),
+                    SizedBox(width: double.infinity, child: DataCard()),
+                    SizedBox(height: AppSizes.s32),
+                    SizedBox(width: double.infinity, child: RankingCard()),
                   ],
                 ),
               ),
