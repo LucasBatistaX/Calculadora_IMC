@@ -24,7 +24,6 @@ class SubCardRanking extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(AppSizes.s16),
           side: BorderSide(
-            // ignore: deprecated_member_use
             color: AppColors.subtitleColor.withOpacity(AppSizes.s02),
           ),
         ),
@@ -43,7 +42,6 @@ class SubCardRanking extends StatelessWidget {
               Column(
                 mainAxisAlignment: .center,
                 crossAxisAlignment: .start,
-                //crossAxisAlignment: .start,
                 children: [
                   Text(title, style: AppTextStyle.titleRankingcard),
                   Text(subTitle, style: AppTextStyle.subTitleRankingcard),
